@@ -1,196 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Global Media - Marketing Agency</title>
+        <!-- Bootstrap CSS CDN -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            /* Custom styles */
+            .navbar {
+                z-index: 10;
+            }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Global Media - Marketing Agency</title>
-  <!-- Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    /* Custom styles */
-    .business-bg {
-      background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') center center/cover no-repeat;
-      height: 500px;
-      position: relative;
-      color: white;
-    }
+            .business-bg {
+                background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')
+                    center center/cover no-repeat;
+                height: 500px;
+                position: relative;
+                color: white;
+                border-bottom-left-radius: 50% 80px;
+                border-bottom-right-radius: 50% 80px;
+                overflow: hidden;
+            }
 
-    .business-bg::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
+            .business-bg::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 0;
+            }
 
-    .business-content {
-      position: relative;
-      z-index: 1;
-    }
+            .business-content {
+                position: relative;
+                z-index: 1;
+            }
 
-    .btn-gradient {
-      background: linear-gradient(90deg, #ff5722, #ffa726);
-      border: none;
-      color: white;
-    }
+            .btn-gradient {
+                background: linear-gradient(90deg, #ff5722, #ffa726);
+                border: none;
+                color: white;
+            }
 
-    .btn-gradient:hover {
-      background: linear-gradient(90deg, #e64a19, #fb8c00);
-      color: white;
-    }
+            .btn-gradient:hover {
+                background: linear-gradient(90deg, #e64a19, #fb8c00);
+                color: white;
+            }
 
-    .card-join-now {
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      border: none;
-    }
+            .card-join-now {
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                border: none;
+            }
 
-    .card-join-now .btn {
-      font-weight: 600;
-    }
+            .card-join-now .btn {
+                font-weight: 600;
+            }
 
-    .why-icons {
-      color: #ff5722;
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
+            .why-icons {
+                color: #ff5722;
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
 
-    @media (max-width: 767.98px) {
-      .business-bg {
-        height: 350px;
-      }
-    }
-  </style>
-</head>
+            @media (max-width: 767.98px) {
+                .business-bg {
+                    height: 350px;
+                }
+            }
+        </style>
+    </head>
 
-<body>
+    <body>
+        <!-- Navbar -->
+        <nav
+            class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100"
+        >
+            <div class="container">
+                <a
+                    class="navbar-brand d-flex align-items-center gap-2"
+                    href="#"
+                >
+                    <div
+                        style="
+                            width: 24px;
+                            height: 24px;
+                            background: radial-gradient(
+                                circle at center,
+                                #ff5722,
+                                #ffa726
+                            );
+                            border-radius: 50%;
+                        "
+                    ></div>
+                    <span class="fw-bold">Global Media</span>
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse justify-content-end"
+                    id="navbarNav"
+                >
+                    <ul class="navbar-nav fw-bold">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Adventures</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Publishers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Agencies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Company</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Our Partners</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                >EN</a
+                            >
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">EN</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">FR</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">ES</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <button
+                                class="btn btn-light btn-outline-dark rounded-pill px-4 fw-bold"
+                            >
+                                Sign Up
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <div
-          style="width:24px; height:24px; background: radial-gradient(circle at center, #ff5722, #ffa726); border-radius: 50%;">
-        </div>
-        <span class="fw-bold">Global Media</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav fw-semibold">
-          <li class="nav-item"><a class="nav-link" href="#">Adventures</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Publishers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Agencies</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Company</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Our Partners</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">EN</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">EN</a></li>
-              <li><a class="dropdown-item" href="#">FR</a></li>
-              <li><a class="dropdown-item" href="#">ES</a></li>
-            </ul>
-          </li>
-          <li class="nav-item ms-3">
-            <button class="btn btn-outline-dark rounded-pill px-4 fw-bold">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        <!-- Business Section -->
+        <section class="business-bg d-flex align-items-center">
+            <div class="container business-content text-center">
+                <h1 class="display-5 fw-bold">
+                    Global agency online marketing
+                </h1>
+                <button
+                    class="btn btn-gradient rounded-pill px-4 py-2 mt-4 fw-semibold"
+                >
+                    SIGN UP RIGHT NOW
+                </button>
+            </div>
+        </section>
 
-  <!-- Business Section -->
-  <section class="business-bg d-flex align-items-center">
-    <div class="container business-content text-center">
-      <h1 class="display-5 fw-bold">Global agency online marketing</h1>
-      <button class="btn btn-gradient rounded-pill px-4 py-2 mt-4 fw-semibold">SIGN UP RIGHT NOW</button>
-    </div>
-  </section>
+        <!-- Cards Section -->
+        <section class="container my-5">
+            <div class="row justify-content-center gap-4">
+                <div class="col-md-3">
+                    <div class="card card-join-now bg-warning text-white p-3">
+                        <h5 class="fw-bold">Advertisers</h5>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Expedita, sunt.
+                        </p>
+                        <div
+                            class="d-flex flex-row flex-nowrap align-items-center"
+                        >
+                            <button
+                                class="btn btn-light btn-sm rounded-pill text-warning px-3 fw-semibold"
+                            >
+                                JOIN NOW
+                            </button>
+                            <a
+                                href="#"
+                                class="ms-3 text-white fw-semibold text-decoration-none"
+                                >Read More</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-join-now p-3 shadow-sm">
+                        <h5 class="fw-bold">Publishers</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Corporis, quia!
+                        </p>
+                        <div
+                            class="d-flex flex-row flex-nowrap align-items-center"
+                        >
+                            <button
+                                class="btn btn-warning btn-sm rounded-pill px-3 fw-semibold"
+                            >
+                                JOIN NOW
+                            </button>
+                            <a
+                                href="#"
+                                class="ms-3 text-dark fw-semibold text-decoration-none"
+                                >Read More</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-join-now p-3 shadow-sm">
+                        <h5 class="fw-bold">Agencies</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Quam, quos.
+                        </p>
+                        <div
+                            class="d-flex flex-row flex-nowrap align-items-center"
+                        >
+                            <button
+                                class="btn btn-warning btn-sm rounded-pill px-3 fw-semibold"
+                            >
+                                JOIN NOW
+                            </button>
+                            <a
+                                href="#"
+                                class="ms-3 text-dark fw-semibold text-decoration-none"
+                                >Read More</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Cards Section -->
-  <section class="container my-5">
-    <div class="row justify-content-center gap-4">
-      <div class="col-md-3">
-        <div class="card card-join-now bg-warning text-white p-4">
-          <h5 class="fw-bold">Advertisers</h5>
-          <p>That can be definitely said about the contemporary travel websites.</p>
-          <div class="d-flex flex-row flex-nowrap align-items-center">
-            <button class="btn btn-light btn-sm rounded-pill text-warning px-3 fw-semibold">JOIN NOW</button>
-            <a href="#" class="ms-3 text-white fw-semibold text-decoration-none">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card card-join-now p-4 shadow-sm">
-          <h5 class="fw-bold">Publishers</h5>
-          <p>That can be definitely said about the contemporary travel websites.</p>
-          <div class="d-flex flex-row flex-nowrap align-items-center">
-            <button class="btn btn-warning btn-sm rounded-pill px-3 fw-semibold">JOIN NOW</button>
-            <a href="#" class="ms-3 text-dark fw-semibold text-decoration-none">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card card-join-now p-4 shadow-sm">
-          <h5 class="fw-bold">Agencies</h5>
-          <p>That can be definitely said about the contemporary travel websites.</p>
-          <div class="d-flex flex-row flex-nowrap align-items-center">
-            <button class="btn btn-warning btn-sm rounded-pill px-3 fw-semibold">JOIN NOW</button>
-            <a href="#" class="ms-3 text-dark fw-semibold text-decoration-none">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- Why We Section -->
+        <section class="container text-center my-5">
+            <h2 class="fw-bold">Why we?</h2>
+            <p class="text-muted mb-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+                quas?
+            </p>
+            <div class="row text-start gx-5">
+                <div class="col-md-3 mb-4">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="why-icons">●</div>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Quos exercitationem assumenda ab quae labore!
+                            Laborum reiciendis, officiis ut, veniam porro eaque
+                            hic illo ea dolorum maxime repellat suscipit
+                            quibusdam. Consequuntur?
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="why-icons">●</div>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Earum quibusdam omnis aliquid numquam sequi
+                            aliquam ipsa, atque delectus quaerat, doloremque
+                            illum placeat? Asperiores nostrum corporis
+                            voluptatem voluptas magnam aperiam autem.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="why-icons">●</div>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Eligendi quae repudiandae dolor libero
+                            provident, quo doloribus, voluptates illum eaque
+                            obcaecati minus quasi similique exercitationem autem
+                            ducimus incidunt dolores ipsum amet?
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="why-icons">●</div>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur iusto excepturi reiciendis ipsum,
+                            sapiente, quos magnam possimus labore, facere ab
+                            nobis. Sed, recusandae! Aliquam nihil pariatur aut
+                            possimus similique voluptate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Why We Section -->
-  <section class="container text-center my-5">
-    <h2 class="fw-bold">Why we?</h2>
-    <p class="text-muted mb-5">That can be definitely said about the contemporary travel websites.</p>
-    <div class="row text-start gx-5">
-      <div class="col-md-3 mb-4">
-        <div class="d-flex align-items-start gap-3">
-          <div class="why-icons">●</div>
-          <p>
-            As the holidays approach, everything tends to get a little hectic. Stress levels increase, there seems to be
-            more unfinished business to take care of than usual. And deadlines,
-          </p>
-        </div>
-      </div>
-      <div class="col-md-3 mb-4">
-        <div class="d-flex align-items-start gap-3">
-          <div class="why-icons">●</div>
-          <p>
-            Even with jQuery’s popularity there’s no need to rely on a JS library for every project. Classic JavaScript
-            works in all major browsers and it’s really all you need to build dynamic interfaces.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-3 mb-4">
-        <div class="d-flex align-items-start gap-3">
-          <div class="why-icons">●</div>
-          <p>
-            On the first day of Christmas my true love gave to me ... a MacBook Pro with Creative Suite. Well, that’s
-            not exactly how the holiday jingle goes, but if you are a web designer this list of gift
-          </p>
-        </div>
-      </div>
-      <div class="col-md-3 mb-4">
-        <div class="d-flex align-items-start gap-3">
-          <div class="why-icons">●</div>
-          <p>
-            When custom label printer Consolidated Labels redesigned its website, their end goal was to increase
-            customer conversions. Yet they liked their site, and didn’t see the need to make
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
