@@ -4,8 +4,6 @@ This is a **simple static website** built using **HTML, CSS, and Bootstrap 5**. 
 
 The website uses **Bootstrap grid system** and **Flexbox** for layout and alignment, with interactive elements like buttons and links, gradient backgrounds, and shadow effects.
 
-This project is useful for learning **Bootstrap layout, responsive design, Flexbox alignment, and modern hero section styling**.
-
 ## Table of Contents
 
 - [Installation](#installation)  
